@@ -287,7 +287,7 @@
 
 
 
-<script>
+
 document.querySelector("#quoteForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
@@ -300,7 +300,7 @@ document.querySelector("#quoteForm").addEventListener("submit", async (e) => {
     alert("Something went wrong. Please try again.");
   }
 });
-</script>
+
 
 
 
