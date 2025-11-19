@@ -84,7 +84,7 @@
       <a class="navbar-brand" href="index.html">
   <img src="images/air-medical-logo.png" alt="Air Medical 24x7" class="logo-img">
 
-      <img src="images/air-medical-logo.png" alt="Air Medical 24x7" class="logo-img">
+
 
 </a>
 <style>
@@ -143,32 +143,49 @@
     <!-- END nav -->
 
 
-
-
-
-     
- 
-
-
-
-
-      <!-- Popup Form -->
-<div id="popupForm" class="popup-overlay" style="display: flex;">
+<!-- Popup Contact -->
+<div id="popupContact" class="popup-overlay" style="display: flex;">
   <div class="popup-content">
     <span id="closePopup" class="popup-close">&times;</span>
-    <h3>Request a Callback</h3>
-   <form id="quoteForm" action="zoho-lead-api.php" method="POST"> <!-- Replace this line when you live the website  -->
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="tel" name="number" placeholder="Your Phone Number" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <input type="text" name="location" placeholder="Your Location" required>
-  <button type="submit" class="btn btn-primary w-100 mt-2">Submit</button>
-</form>
+
+    <h3>Contact Us</h3>
+    <p style="font-size:16px; margin-top:10px; color:#333;">
+      Call or WhatsApp us anytime
+    </p>
+
+    <!-- CALL BUTTON -->
+    <a href="tel:+971565542001" class="contact-btn call-btn">
+      📞 Call: +971 56 554 2001
+    </a>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/971565542001" target="_blank" class="contact-btn whatsapp-btn">
+      💬 WhatsApp: +971 56 554 2001
+    </a>
+
   </div>
 </div>
 
-<!-- Popup Styles -->
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popupContact");
+    const closeBtn = document.getElementById("closePopup");
+
+    // Show popup immediately on page load
+    popup.style.display = "flex";
+
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  });
+</script>
 
 
 <style>
@@ -189,28 +206,42 @@
   .popup-content {
     background: #fff;
     padding: 30px 40px;
-    border-radius: 10px;
+    border-radius: 12px;
     width: 90%;
-    max-width: 400px;
+    max-width: 380px;
     text-align: center;
     position: relative;
     animation: slideDown 0.4s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   }
 
   .popup-content h3 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #333;
+    font-size: 22px;
+    font-weight: 600;
   }
 
-  .popup-content input {
+  /* Contact Buttons */
+  .contact-btn {
+    display: block;
     width: 100%;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
   }
+
+  .call-btn {
+    background: #007bff;
+  }
+
+  .whatsapp-btn {
+    background: #25d366;
+  } 
 
   .popup-close {
     position: absolute;
@@ -227,31 +258,6 @@
   }
 </style>
 
-<!-- Popup Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("popupForm");
-    const closeBtn = document.getElementById("closePopup");
-
-    // Show popup immediately on load
-    popup.style.display = "flex";
-
-    // Close popup when clicking X
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-
-    // Close popup if clicking outside box
-    window.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        popup.style.display = "none";
-      }
-    });
-  });
-</script>
- <!-- END Popup Form -->
-
-    
 
 
  
