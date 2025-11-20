@@ -9355,3 +9355,48 @@ body {
 
 
 
+
+
+/* Make navbar background white and fixed */
+#ftco-navbar {
+  background: #ffffff !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* soft shadow */
+}
+
+/* Adjust spacing so content doesn't hide behind navbar */
+body {
+  padding-top: 80px; /* Adjust if header height is different */
+}
+
+/* Menu link styles */
+#ftco-navbar .navbar-nav .nav-link {
+  color: #000000 !important;     /* Menu text black */
+  font-weight: 700 !important;   /* Bold */
+  font-size: 18px !important;    /* Bigger text */
+  padding: 10px 15px;
+}
+
+/* Hover effect */
+#ftco-navbar .navbar-nav .nav-link:hover {
+  color: #007bff !important; /* Optional blue hover - change if needed */
+}
+
+/* Dropdown menu style */
+#ftco-navbar .dropdown-menu {
+  background: #ffffff;
+}
+
+#ftco-navbar .dropdown-item {
+  color: #000000 !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#ftco-navbar .dropdown-item:hover {
+  background: #f2f2f2;
+  color: #000000 !important;
+}
