@@ -143,7 +143,14 @@
     <!-- END nav -->
 
 
-<!-- Popup Contact -->
+
+
+
+ 
+
+
+
+      <!-- Popup Contact -->
 <div id="popupContact" class="popup-overlay" style="display: flex;">
   <div class="popup-content">
     <span id="closePopup" class="popup-close">&times;</span>
@@ -166,28 +173,7 @@
   </div>
 </div>
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("popupContact");
-    const closeBtn = document.getElementById("closePopup");
-
-    // Show popup immediately on page load
-    popup.style.display = "flex";
-
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        popup.style.display = "none";
-      }
-    });
-  });
-</script>
-
-
+<!-- Popup Styles -->
 <style>
   /* Overlay Background */
   .popup-overlay {
@@ -198,6 +184,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: 9999;
+    display: none; /* default hidden */
     justify-content: center;
     align-items: center;
   }
@@ -241,15 +228,17 @@
 
   .whatsapp-btn {
     background: #25d366;
-  } 
+  }
 
   .popup-close {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 22px;
+    font-size: 26px;
     cursor: pointer;
     color: #666;
+    font-weight: bold;
+    z-index: 10000;
   }
 
   @keyframes slideDown {
@@ -258,9 +247,30 @@
   }
 </style>
 
+<!-- Popup Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popupContact");
+    const closeBtn = document.getElementById("closePopup");
+
+    // Show popup automatically
+    popup.style.display = "flex";
+
+    // Close on clicking "X"
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    // Close when clicking outside popup box
+    window.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  });
+</script>
 
 
- 
     
     
     <div class="hero-wrap" style="background-image: url('images/WebsiteBanners\ 3.jpg');" data-stellar-background-ratio="0.5">
@@ -398,7 +408,7 @@
 	    					<div class="cause-entry">
 		    					<a href="#" class="img" style="background-image: url(images/am_3.jpg);"></a>
 		    					<div class="text p-3 p-md-4">
-		    						<h3><a href="#">Medical Tourism</h3>
+		    						<h3><a href="#">Medical Tourism </a></h3> 
 		    						<p>Medical Tourism and Patient Transfer
                         Air Medical 24x7 supports global medical tourism through safe and seamless air ambulance and medical evacuation services. 
                         Whether you need international medevac, medical escort, or commercial stretcher flights, we provide end-to-end coordination with hospitals, doctors, and families. 
@@ -657,7 +667,7 @@
 		
 	
 
-      <!-- Footer -->
+        <!-- Footer -->
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
       <div class="container">
@@ -666,8 +676,8 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About Us</h2>
               <p>Air Medical 24x7 provides 24×7 global air ambulance, medical evacuation, and patient repatriation services across India, the UAE, and worldwide.</p>
-              <li><a href="privacy-policy.html" class="py-2 d-block">Privacy Policy </a></li>
-              <li><a href="terms-condition.html" class="py-2 d-block">Terms and Conditions </a></li>
+              <li><a href="#" class="py-2 d-block">Privacy Policy </a></li>
+              <li><a href="#" class="py-2 d-block">Terms and Conditions </a></li>
           
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="https://x.com/airmedical24x7"><span class="icon-twitter"></span></a></li>
@@ -680,7 +690,7 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Recent Blog</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/air-ambulance.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                   <div class="meta">
@@ -708,22 +718,23 @@
               <h2 class="ftco-heading-2">Site Links</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Home</a></li>
-                <li><a href="#" class="py-2 d-block">Air Medical</a></li>
-                <li><a href="#" class="py-2 d-block">Medical Tourism</a></li>
                 <li><a href="#" class="py-2 d-block">Air Ambulance</a></li>
-                <li><a href="#" class="py-2 d-block">Event</a></li>
+                <li><a href="#" class="py-2 d-block">Flight Medical Escort Services</a></li>
+                <li><a href="#" class="py-2 d-block">Medical Tourism</a></li>
+                <li><a href="#" class="py-2 d-block">Commercial Flight Stretcher</a></li>
+                <li><a href="#" class="py-2 d-block">Country</a></li>
                 <li><a href="#" class="py-2 d-block">About</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-3">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Contact Us </h2>
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">Worldwide Air Medical Treatment Facilitation
                      <li></li>
-                    Services Co. L.L.C. 310, Al Garhoud Community Center, Dubai Autism Center - Dubai (UAE)</span></li>
-	                <li><a href="tel:+971565542001"><span class="icon icon-phone"></span><span class="text">+971 56 554 2001</span></a></li>
+                     <li><a href=""><span class=""></span><span class="text">Address: 310, Al Garhoud Community Dubai Autism Center Near Dubai International Airport Terminal 1 - Dubai - United Arab Emirates</span></a></li>
+                     <li><a href="tel:+971565542001"><span class="icon icon-phone"></span><span class="text">+971 56 554 2001</span></a></li>
 	                <li><a href="mailto:info@airmedical24x7.com"><span class="icon icon-envelope"></span><span class="text">info@airmedical24x7.com</span></a></li>
 	              </ul>
 	            </div>
@@ -739,7 +750,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer>   
     
   
 
