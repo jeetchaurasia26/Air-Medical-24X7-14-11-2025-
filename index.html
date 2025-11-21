@@ -277,6 +277,11 @@
 <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
   <div class="carousel-inner">
 
+     <!-- ISO Logo Inside Hero (bottom-right) -->
+  <div class="hero-iso-logo">
+    <img src="images/issso.png" alt="ISO Certified">
+  </div>
+
     <!-- Slide 1 -->
     <div class="carousel-item active">
       <div class="hero-wrap" style="background-image: url('images/mainherobanner.jpg');" data-stellar-background-ratio="0.5">
@@ -307,6 +312,23 @@
 </div>
 
 <style>
+
+  .hero-wrap {
+  position: relative;
+}
+
+.hero-iso-logo {
+  position: absolute;
+  bottom: 20px;   /* move up/down */
+  right: 30px;    /* move left/right */
+  z-index: 5;
+}
+
+.hero-iso-logo img {
+  width: 150px;   /* adjust size */
+  height: auto;
+}
+
   /* Fix hero height */
 .hero-wrap {
   height: 70vh;           /* Desktop height */
@@ -359,44 +381,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row">
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 d-flex services p-3 py-4 d-block">
-              <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
-              <div class="media-body pl-4">
-                <h3 class="heading">Book Air Ambulance Services</h3>
-                <p>We provide <strong>emergency air ambulance and medical charter services</strong> across India and internationally. 
-      Whether it’s a patient transfer or <a href="/medical-evacuation">medical evacuation</a>, 
-      our aircraft are equipped with advanced life-support systems and professional doctors on board.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 d-flex services p-3 py-4 d-block">
-              <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
-              <div class="media-body pl-4">
-                <h3 class="heading">Join as a Medical Escort / Partner</h3>
-                <p>Are you a <strong>doctor or paramedic</strong> passionate about saving lives? 
-      Join our <a href="/medical-escort">global medical escort network</a> and assist patients 
-      during air ambulance transfers worldwide.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 d-flex services p-3 py-4 d-block">
-              <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
-              <div class="media-body pl-4">
-                <h3 class="heading">Request International Patient Transfer</h3>
-                <p>We manage <strong>international patient transfers</strong> from bed to bed with complete medical supervision. 
-      Our <a href="/air-ambulance-worldwide">worldwide air ambulance service</a> ensures safe, seamless global travel for patients.</p>
-              </div>
-            </div>    
-          </div>
-        </div>
-    	</div>
-    </section>
+   
 
 <!-- Our Service -->
     <section class="ftco-section bg-light">
@@ -702,60 +687,7 @@
 
      <!-- END Blog -->
     
-<!-- --------- NEW CSS----------- -->
-<style>
-  /* --- Mobile & overflow fixes --- */
 
-/* 1) Prevent accidental horizontal scrolling (guard) */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* safe guard to hide accidental side overflow */
-}
-
-/* 2) Make base font-size responsive (smaller on phones) */
-html { font-size: 16px; } /* keep desktop baseline */
-@media (max-width: 767.98px) {
-  html { font-size: 14px; } /* reduce text scale on small screens */
-  body { line-height: 1.45; } /* a little more breathing room */
-  .container { padding-left: 12px; padding-right: 12px; } /* reduce container padding */
-}
-
-/* 3) Fix services section that creates huge right-side overflow */
-@media (max-width: 991.98px) {
-  /* remove the oversized pseudo-element and big hover shift on small screens */
-  .services-wrap {
-    padding: 18px 14px;            /* reduce padding for small screens */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-overflow-scrolling: touch; /* smoother scrolling on iOS */
-  }
-
-  .services-wrap:after { display: none !important; }
-  .services-wrap:hover { margin-left: 0 !important; transform: none !important; }
-
-  /* if you have items that depended on hover to reveal content,
-     use a simple stacked layout on mobile instead */
-  .services-wrap .icon { left: 10px; } /* adjust icon positioning */
-}
-
-/* 4) Ensure images and iframes are responsive (double-check) */
-img, picture, svg, iframe, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* 5) If some inner block is swallowing touch/scroll (safe fallback)
-   allow vertical scrolling where needed */
-@media (max-width: 991.98px) {
-  .ftco-section-2, .services-wrap, .container {
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-</style>
-		
 	
 
        
