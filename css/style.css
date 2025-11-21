@@ -9412,3 +9412,101 @@ body {
 }
 
 
+
+
+
+
+
+
+
+/* MOBILE HERO FIX */
+@media (max-width: 768px) {
+
+  .hero-wrap {
+    height: 38vh !important;       /* Reduce hero height */
+    min-height: 38vh !important;
+  }
+
+  .slider-text {
+    height: auto !important;
+    padding: 20px 0 !important;
+  }
+
+  .hero-wrap .container,
+  .hero-wrap .row {
+    min-height: 38vh !important;
+  }
+
+  .ftco-animate {
+    transform: none !important;
+  }
+}
+
+
+
+
+/* ---------------------------------------------------
+   MOBILE RESPONSIVE FIXES (ADD AT END OF style.css)
+--------------------------------------------------- */
+@media (max-width: 768px) {
+
+  /* Reduce global text size */
+  body {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  h1 { font-size: 26px !important; }
+  h2 { font-size: 22px !important; }
+  h3 { font-size: 20px !important; }
+  h4 { font-size: 18px !important; }
+  p   { font-size: 14px !important; }
+
+  /* Fix hero banner height */
+  .hero-wrap {
+    height: 280px !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .hero-wrap .container {
+    padding-top: 40px !important;
+  }
+
+  /* Reduce padding for all sections */
+  section {
+    padding: 30px 10px !important;
+  }
+
+  /* Make images responsive */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Fix buttons too large */
+  .btn {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+  }
+
+  /* Fix service boxes / cards */
+  .ftco-services .media,
+  .services .text {
+    padding: 15px !important;
+  }
+
+  /* Fix navbar spacing */
+  .navbar {
+    padding: 5px 10px !important;
+  }
+
+  /* Fix large hero text */
+  .hero-wrap h1,
+  .hero-wrap .mb-3 {
+    font-size: 24px !important;
+  }
+
+}
+
+
+
