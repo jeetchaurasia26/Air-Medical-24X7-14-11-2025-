@@ -9164,6 +9164,14 @@ textarea.form-control {
 
 
 
+    
+
+
+
+
+    /* Changes for the Mobile User Friendly Below  */
+
+
 
     
 /* Floating Buttons Container */
@@ -9407,11 +9415,35 @@ body {
 
 
 
-   /* Changes for the Mobile User Friendly Below  */
 
 
    
    
+
+
+/* MOBILE HERO FIX */
+@media (max-width: 768px) {
+
+  .hero-wrap {
+    height: 38vh !important;       /* Reduce hero height */
+    min-height: 38vh !important;
+  }
+
+  .slider-text {
+    height: auto !important;
+    padding: 20px 0 !important;
+  }
+
+  .hero-wrap .container,
+  .hero-wrap .row {
+    min-height: 38vh !important;
+  }
+
+  .ftco-animate {
+    transform: none !important;
+  }
+}
+
 
 
 
