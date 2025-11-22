@@ -154,7 +154,7 @@
   </nav>
 
   <style>
-    /* ================================
+  /* ================================
    SLIM FIXED TOP CONTACT BAR
    ================================ */
 .top-contact-fixed {
@@ -166,8 +166,8 @@
   width: 100%;
   text-align: center;
 
-  padding: 6px 0;               /* slim height */
-  background: #ffffff;          /* white bar */
+  padding: 6px 0;              
+  background: #ffffff;          
   border-bottom: 1px solid #e0e0e0;
 
   font-size: 14px;
@@ -178,7 +178,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;                    /* space between Call | WhatsApp */
+  gap: 12px;
 }
 
 /* Links */
@@ -192,35 +192,39 @@
   text-decoration: underline;
 }
 
-/* Divider */
 .divider {
   color: #777;
 }
 
-/* ==========================================================
-   IMPORTANT: ADJUST BODY PADDING TO PREVENT HEADER OVERLAP
-   ========================================================== */
+/* ================================
+   FIX HEADER OVERLAP
+   ================================ */
 body {
+<<<<<<< HEAD
   padding-top: 100px !important;   /* ensures header never hides */
+=======
+  padding-top: 42px !important;  /* FIXED — perfect for desktop */
+>>>>>>> fe32051f420af46be913267977c8b91b0c464420
 }
 
 /* ================================
-   MOBILE FIXES
+   MOBILE FIX
    ================================ */
 @media (max-width: 480px) {
 
   .top-contact-fixed {
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;        /* keep one single line on mobile */
+    gap: 6px;
     padding: 5px 0;
+    font-size: 13px;
   }
 
   .divider {
-    display: none;      /* hide "|" for cleaner mobile look */
+    display: inline;            /* keep | divider */
   }
 
   body {
-    padding-top: 95px !important;   /* taller space for stacked links */
+    padding-top: 45px !important;   /* removed the big 95px */
   }
 }
 
