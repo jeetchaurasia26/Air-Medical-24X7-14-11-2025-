@@ -7475,6 +7475,7 @@ h1, h2, h3, h4, h5,
   width: 100%;
   height: calc(100vh - 117px);
   min-height: 700px;
+ 
   position: relative; }
   .hero-wrap.hero-wrap-2 {
     height: 600px; }
@@ -7486,7 +7487,11 @@ h1, h2, h3, h4, h5,
     bottom: 0;
     content: '';
     opacity: 0;
-    background: #000; }
+    background: #000;
+    
+  
+  }
+    
 
 .slider-text {
   color: #fff;
@@ -9323,8 +9328,9 @@ textarea.form-control {
 #ftco-navbar {
   background: #ffffff !important;
   position: fixed;
+   padding-top: 37px;
   width: 100%;
-  top: 0;
+  top: 30px;
   z-index: 9999;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* soft shadow */
 }

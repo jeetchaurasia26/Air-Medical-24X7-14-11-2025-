@@ -88,11 +88,24 @@
       </button>
 
 
-      <!-- START nav -->
+  <!-- START nav -->
+       <!-- Top Slim Contact Bar -->
+<div class="top-contact-fixed">
+  <a href="tel:+971565542001" class="top-contact-link">
+    Call us Now : +971 56 554 2001
+  </a>
+  <span class="divider">|</span>
+  <a href="https://wa.me/971565542001" target="_blank" class="top-contact-link">
+    WhatsApp us Now
+  </a>
+</div>
+
+       
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 
+                     <li class="nav-item dropdown">
                     <li class="nav-item dropdown">
     <a href="air-ambulance.html" class="nav-link dropdown-toggle" id="airambulance" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Air Ambulance
@@ -126,6 +139,79 @@
       </div>
     </div>
   </nav>
+
+  <style>
+  /* ================================
+   SLIM FIXED TOP CONTACT BAR
+   ================================ */
+.top-contact-fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  text-align: center;
+
+  padding: 6px 0;              
+  background: #ffffff;          
+  border-bottom: 1px solid #e0e0e0;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Links */
+.top-contact-link {
+  color: #007bff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.top-contact-link:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  color: #777;
+}
+
+/* ================================
+   FIX HEADER OVERLAP
+   ================================ */
+body {
+  padding-top: 42px !important;  /* FIXED — perfect for desktop */
+}
+
+/* ================================
+   MOBILE FIX
+   ================================ */
+@media (max-width: 480px) {
+
+  .top-contact-fixed {
+    flex-direction: row;        /* keep one single line on mobile */
+    gap: 6px;
+    padding: 5px 0;
+    font-size: 13px;
+  }
+
+  .divider {
+    display: inline;            /* keep | divider */
+  }
+
+  body {
+    padding-top: 45px !important;   /* removed the big 95px */
+  }
+}
+
+  </style>
     <!-- END nav -->
 
       <!-- Popup Contact -->
