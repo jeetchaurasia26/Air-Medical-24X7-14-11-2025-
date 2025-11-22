@@ -102,6 +102,18 @@
 
 
       <!-- START nav -->
+       <!-- Top Slim Contact Bar -->
+<div class="top-contact-fixed">
+  <a href="tel:+971565542001" class="top-contact-link">
+    Call us Now : +971 56 554 2001
+  </a>
+  <span class="divider">|</span>
+  <a href="https://wa.me/971565542001" target="_blank" class="top-contact-link">
+    WhatsApp us Now
+  </a>
+</div>
+
+       
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
@@ -140,6 +152,79 @@
       </div>
     </div>
   </nav>
+
+  <style>
+    /* ================================
+   SLIM FIXED TOP CONTACT BAR
+   ================================ */
+.top-contact-fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  text-align: center;
+
+  padding: 6px 0;               /* slim height */
+  background: #ffffff;          /* white bar */
+  border-bottom: 1px solid #e0e0e0;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;                    /* space between Call | WhatsApp */
+}
+
+/* Links */
+.top-contact-link {
+  color: #007bff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.top-contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  color: #777;
+}
+
+/* ==========================================================
+   IMPORTANT: ADJUST BODY PADDING TO PREVENT HEADER OVERLAP
+   ========================================================== */
+body {
+  padding-top: 80px !important;   /* ensures header never hides */
+}
+
+/* ================================
+   MOBILE FIXES
+   ================================ */
+@media (max-width: 480px) {
+
+  .top-contact-fixed {
+    flex-direction: column;
+    gap: 4px;
+    padding: 5px 0;
+  }
+
+  .divider {
+    display: none;      /* hide "|" for cleaner mobile look */
+  }
+
+  body {
+    padding-top: 95px !important;   /* taller space for stacked links */
+  }
+}
+
+  </style>
     <!-- END nav -->
 
 
