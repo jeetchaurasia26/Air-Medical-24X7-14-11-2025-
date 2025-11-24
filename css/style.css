@@ -9564,3 +9564,17 @@ html, body {
     font-size: 14px !important;
   }
 }
+
+
+
+
+/* GLOBAL FIX — Remove Right Side Gap on Mobile */
+* {
+  box-sizing: border-box !important;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
