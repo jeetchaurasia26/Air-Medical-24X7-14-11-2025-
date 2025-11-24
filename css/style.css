@@ -9467,28 +9467,50 @@ html, body {
 
 
 
+/* ============================================
+   UNIVERSAL MOBILE FIX - ADD AT END OF CSS
+   ============================================ */
+@media (max-width: 576px) {
 
-/* GLOBAL FIX — Remove Right Side Gap on Mobile */
-* {
-  box-sizing: border-box !important;
-}
+  /* Fix large white space caused by fixed heights */
+  section, div, .container, .container-fluid {
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden !important;
-  max-width: 100% !important;
-}
+  /* Fix oversized images */
+  img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
 
+  /* Fix blue section padding (Air Ambulance Section) */
+  .air-ambulance-section,
+  .services-section,
+  .about-section {
+    padding: 20px 10px !important;
+  }
 
-/* FIX OWL CAROUSEL RIGHT SIDE GAP */
-.owl-carousel, 
-.owl-stage-outer, 
-.owl-stage, 
-.owl-item {
-  max-width: 100% !important;
-}
+  /* Fix ISO Badge pushing content */
+  .badge,
+  .iso-badge,
+  .certified-badge {
+    max-width: 90px !important;
+    height: auto !important;
+    position: static !important; /* Prevent overlap and extra space */
+    margin: 10px auto !important;
+    display: block !important;
+  }
 
-img {
-  max-width: 100% !important;
-  height: auto !important;
+  /* Remove excessive margins added by Bootstrap overrides or custom CSS */
+  * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
 }
