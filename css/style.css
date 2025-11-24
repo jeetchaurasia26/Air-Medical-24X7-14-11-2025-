@@ -9452,8 +9452,38 @@ body {
 }
 
 
+/* GLOBAL FIX — Remove Right Side Gap on Mobile */
+* {
+  box-sizing: border-box !important;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
 
 
 
 
 
+
+/* GLOBAL FIX — Remove Right Side Gap on Mobile */
+* {
+  box-sizing: border-box !important;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+
+/* FIX OWL CAROUSEL RIGHT SIDE GAP */
+.owl-carousel, 
+.owl-stage-outer, 
+.owl-stage, 
+.owl-item {
+  max-width: 100% !important;
+}

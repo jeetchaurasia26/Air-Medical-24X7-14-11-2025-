@@ -581,6 +581,51 @@ body {
     		</div>
     	</div>
     </section>
+
+    <style>
+      /* --- FIX OWL CAROUSEL FREEZING SCROLL ON MOBILE --- */
+.owl-carousel,
+.owl-stage-outer {
+  touch-action: pan-y !important;   /* allow vertical scroll */
+  -ms-touch-action: pan-y !important;
+}
+
+.owl-carousel .owl-stage {
+  touch-action: pan-y !important;
+}
+
+.owl-carousel .owl-item {
+  touch-action: pan-y !important;
+  pointer-events: auto !important;
+}
+
+
+/* -- SERVICES SECTION MOBILE FIXES -- */
+@media (max-width: 768px) {
+
+  .services .service-item img {
+    width: 100%;
+    height: 160px !important;
+    object-fit: cover !important;   /* Fix stretched images */
+    border-radius: 8px;
+  }
+
+  .services .service-item {
+    margin-bottom: 20px !important;
+  }
+
+  /* Fix any padding or huge gaps */
+  .services,
+  .services .container,
+  .services .row {
+    padding: 0 15px !important;
+  }
+
+}
+
+
+    </style>
+    
     <!-- END of Our Service -->
 
 

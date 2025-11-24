@@ -404,20 +404,22 @@ body {
 
        
 
-        <!-- Start Form -->
+      <!-- Start Form -->
 <section class="quote-section">
   <div class="row block-9">
     <div class="col-md-6 pr-md-5">
       <h4 class="mb-4 text-center">Request Quote</h4>
-      <form id="quoteForm" action="zoho-lead-api.php" method="post">
-        
-        <!-- Name -->
+
+      <form id="quoteForm">
+
+        <!-- Full Name -->
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" 
+                 required pattern="[A-Za-z ]+">
         </div>
 
-        <!-- Phone (auto country code) -->
+        <!-- Phone (with auto country code) -->
         <div class="form-group">
           <label for="phone">Phone Number</label>
           <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
@@ -435,12 +437,12 @@ body {
           <select id="service" name="service" class="form-control" required>
             <option value="">Select a Service</option>
             <option>Air Ambulance</option>
-            <option>Commercial Flight Stretcher Service </option>
-             <option>Flight Medical escort</option>
-              <option>Medical Tourism</option>
+            <option>Commercial Flight Stretcher Service</option>
+            <option>Flight Medical escort</option>
+            <option>Medical Tourism</option>
             <option>Flight Wheelchair Services</option>
-            <option>Private Medical Charter Jet</option>           
-             <option>Medical Travel Assistance</option>
+            <option>Private Medical Charter Jet</option>
+            <option>Medical Travel Assistance</option>
             <option>Organ Transplant Assistance</option>
             <option>Overseas Medical Tourism</option>
             <option>ECMO Transfer Services</option>
@@ -452,6 +454,7 @@ body {
         <div class="form-group text-center">
           <input type="submit" value="Submit Request" class="btn btn-primary py-3 px-5">
         </div>
+
       </form>
     </div>
 
@@ -459,21 +462,60 @@ body {
   </div>
 </section>
 
-<!-- Include intl-tel-input Plugin for Auto Country Code -->
+<!-- intl-tel-input -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+<!-- SUPABASE CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
-  const phoneInputField = document.querySelector("#phone");
-  const phoneInput = window.intlTelInput(phoneInputField, {
-    initialCountry: "auto",
-    geoIpLookup: function(callback) {
-      fetch("https://ipapi.co/json")
-        .then((res) => res.json())
-        .then((data) => callback(data.country_code))
-        .catch(() => callback("in"));
-    },
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-  });
+// Initialize Supabase
+const SUPABASE_URL = "https://hoeflgkuogjoswflnhwu.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvZWZsZ2t1b2dqb3N3ZmxuaHd1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM5NTYwNDYsImV4cCI6MjA3OTUzMjA0Nn0.3DVgzsdpa4C5TYHU6QBNrvOq4K9QKx-HqZ3onHwDi4k";
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// Setup intl-tel-input for phone auto country code
+const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+  initialCountry: "auto",
+  geoIpLookup: function(callback) {
+    fetch("https://ipapi.co/json")
+      .then((res) => res.json())
+      .then((data) => callback(data.country_code))
+      .catch(() => callback("IN"));
+  },
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+
+// Handle form submit → Supabase
+document.getElementById("quoteForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const fullPhone = phoneInput.getNumber(); // full number with country code
+  const countryCode = phoneInput.getSelectedCountryData().dialCode; 
+  const email = document.getElementById("email").value;
+  const service = document.getElementById("service").value;
+
+  const payload = {
+    name: name,
+    number: fullPhone,
+    country_code: "+" + countryCode,
+    email: email,
+    service: service
+  };
+
+  const { data, error } = await supabaseClient.from("contact_form").insert(payload);
+
+  if (error) {
+    alert("❌ Error: " + error.message);
+  } else {
+    alert("✔ Request submitted successfully!");
+    e.target.reset();
+  }
+});
 </script>
 
 <style>
@@ -499,29 +541,23 @@ body {
   }
 }
 
-
-/* Fix phone input alignment */
+/* Phone input alignment fix */
 .iti {
   width: 100%;
 }
-
 .iti__flag-container {
   height: 100%;
 }
-
 .iti input.form-control {
-  padding-left: 50px !important; /* Ensures text starts after flag */
-  height: 45px; /* Match other input height */
+  padding-left: 50px !important;
+  height: 45px;
 }
-
 input#phone {
   width: 100%;
   box-sizing: border-box;
 }
-
-
-
 </style>
+
 <!-- End Form -->
 
 

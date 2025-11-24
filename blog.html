@@ -390,88 +390,9 @@ body {
 </style>
 
 
-<h3>Contact Form</h3>
-
-<div class="form-box">
-<form id="contactForm">
-
-  <label>Name</label>
-  <input id="name" required pattern="[A-Za-z ]+" placeholder="Enter your name">
-
-  <label>Number</label>
-  <div class="flex-row">
-    <input id="countryCode" style="width: 100px;" readonly>
-    <input id="phone" required pattern="[0-9]{5,15}" placeholder="Phone number">
-  </div>
-
-  <label>Email</label>
-  <input id="email" type="email" required placeholder="Enter your email">
-
-  <label>Service Required</label>
-  <select id="service" required>
-    <option value="">Select a Service</option>
-    <option>Air Ambulance</option>
-    <option>Commercial Flight Stretcher Service</option>
-    <option>Flight Medical escort</option>
-    <option>Medical Tourism</option>
-    <option>Flight Wheelchair Services</option>
-    <option>Private Medical Charter Jet</option>
-    <option>Medical Travel Assistance</option>
-    <option>Organ Transplant Assistance</option>
-    <option>Overseas Medical Tourism</option>
-    <option>ECMO Transfer Services</option>
-    <option>Home Health Care</option>
-  </select>
-
-  <button type="submit">Submit</button>
-
-</form>
-</div>
-
-<script>
-// AUTO-DETECT COUNTRY CODE
-fetch("https://ipapi.co/json/")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("countryCode").value = "+" + data.country_calling_code;
-  })
-  .catch(() => {
-    document.getElementById("countryCode").value = "+000";
-  });
-
-// HANDLE FORM SUBMISSION
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const payload = {
-    name: document.getElementById("name").value,
-    number: document.getElementById("phone").value,
-    country_code: document.getElementById("countryCode").value,
-    email: document.getElementById("email").value,
-    service: document.getElementById("service").value
-  };
-
-  const res = await fetch("https://jeetchaurasia26.github.io/Air-Medical-24X7-14-11-2025-/blog.html", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
-  });
-
-  const data = await res.json();
-
-  if (data.success) {
-    alert("Submitted successfully!");
-    e.target.reset();
-  } else {
-    alert("Error: " + data.error);
-  }
-});
-</script>
 
 
-
-
-    
+   
     <section class="ftco-section">
       <div class="container">
         <div class="row d-flex">
