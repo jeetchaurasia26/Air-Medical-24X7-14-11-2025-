@@ -9568,13 +9568,36 @@ html, body {
 
 
 
-/* GLOBAL FIX — Remove Right Side Gap on Mobile */
-* {
-  box-sizing: border-box !important;
-}
+/* ============================================
+   MOBILE HEADER & LOGO FIX
+   ============================================ */
+@media (max-width: 576px) {
 
-html, body {
-  width: 100%;
-  overflow-x: hidden !important;
-  max-width: 100% !important;
+  /* Shrink logo image */
+  .navbar-brand img,
+  header .logo img,
+  .site-logo img {
+    max-height: 90px !important; /* Adjust size as needed */
+    width: auto !important;
+  }
+
+  /* Reduce navbar height */
+  .navbar,
+  header,
+  .top-header {
+    padding-top: 20px !important;
+    padding-bottom: 4px !important;
+    min-height: auto !important;
+  }
+
+  /* Fix nav links size */
+  .navbar-nav .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Fix hamburger icon spacing */
+  .navbar-toggler {
+    padding: 4px 6px !important;
+  }
 }
