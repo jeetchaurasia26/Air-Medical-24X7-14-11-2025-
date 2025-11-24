@@ -9424,34 +9424,6 @@ body {
 
 
 
-   
-   
-
-
-/* MOBILE HERO FIX */
-@media (max-width: 768px) {
-
-  .hero-wrap {
-    height: 38vh !important;       /* Reduce hero height */
-    min-height: 38vh !important;
-  }
-
-  .slider-text {
-    height: auto !important;
-    padding: 20px 0 !important;
-  }
-
-  .hero-wrap .container,
-  .hero-wrap .row {
-    min-height: 38vh !important;
-  }
-
-  .ftco-animate {
-    transform: none !important;
-  }
-}
-
-
 /* GLOBAL FIX — Remove Right Side Gap on Mobile */
 * {
   box-sizing: border-box !important;
