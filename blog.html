@@ -341,6 +341,136 @@ body {
 
 
 
+<style>
+/* FORM STYLING */
+.form-box {
+  max-width: 450px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.form-box label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-box button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #0077ff;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background: #005ccd;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+}
+</style>
+
+
+<h3>Contact Form</h3>
+
+<div class="form-box">
+<form id="contactForm">
+
+  <label>Name</label>
+  <input id="name" required pattern="[A-Za-z ]+" placeholder="Enter your name">
+
+  <label>Number</label>
+  <div class="flex-row">
+    <input id="countryCode" style="width: 100px;" readonly>
+    <input id="phone" required pattern="[0-9]{5,15}" placeholder="Phone number">
+  </div>
+
+  <label>Email</label>
+  <input id="email" type="email" required placeholder="Enter your email">
+
+  <label>Service Required</label>
+  <select id="service" required>
+    <option value="">Select a Service</option>
+    <option>Air Ambulance</option>
+    <option>Commercial Flight Stretcher Service</option>
+    <option>Flight Medical escort</option>
+    <option>Medical Tourism</option>
+    <option>Flight Wheelchair Services</option>
+    <option>Private Medical Charter Jet</option>
+    <option>Medical Travel Assistance</option>
+    <option>Organ Transplant Assistance</option>
+    <option>Overseas Medical Tourism</option>
+    <option>ECMO Transfer Services</option>
+    <option>Home Health Care</option>
+  </select>
+
+  <button type="submit">Submit</button>
+
+</form>
+</div>
+
+<script>
+// AUTO-DETECT COUNTRY CODE
+fetch("https://ipapi.co/json/")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("countryCode").value = "+" + data.country_calling_code;
+  })
+  .catch(() => {
+    document.getElementById("countryCode").value = "+000";
+  });
+
+// HANDLE FORM SUBMISSION
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const payload = {
+    name: document.getElementById("name").value,
+    number: document.getElementById("phone").value,
+    country_code: document.getElementById("countryCode").value,
+    email: document.getElementById("email").value,
+    service: document.getElementById("service").value
+  };
+
+  const res = await fetch("https://jeetchaurasia26.github.io/Air-Medical-24X7-14-11-2025-/index.html", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+
+  const data = await res.json();
+
+  if (data.success) {
+    alert("Submitted successfully!");
+    e.target.reset();
+  } else {
+    alert("Error: " + data.error);
+  }
+});
+</script>
+
+
+
+
     
     <section class="ftco-section">
       <div class="container">
