@@ -139,20 +139,116 @@
 
 
 
-  <!-- MAIN INNER CONTENT: place this inside your page where header already exists -->
-  <main>
-    <div class="wrap">
+<!-- MAIN INNER CONTENT -->
+<main>
+  <div class="wrap">
 
-      <!-- Intro / Headline -->
-      <section class="intro" data-aos="fade-up">
-        <div class="meta">
+    <!-- INTRO SECTION -->
+    <section class="intro-section">
+      <div class="intro-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="intro-left" data-aos="fade-right">
           <small class="muted">Air Ambulance Charter Services | Air Medical 24x7</small>
-          <h1>Air Ambulance Charter Services in India & Worldwide | 24x7 Emergency Medical Flights</h1>
-          <p>Air Medical 24x7 provides 24-hour air ambulance charter services across India and globally. 
-            Fully equipped ICU aircraft, expert doctors, and advanced life support for critical patient transfers. 
-            Call now for fast and safe medical air transport.</p>
+          <h1>Air Ambulance Charter Services | 24x7 Emergency Medical Flights</h1>
+
+          <p>Air Medical 24X7 offers 24X7 air ambulance charter services globally.
+            Fully equipped ICU aircraft, experienced medical teams, and rapid response for critical patient transfers.
+            Call now for an emergency air ambulance quote.</p>
+
+          <p>With the Air Medical 24X7 grounded air ambulance service, a fleet of aircrafts equipped with ICU and medical professionals,
+            airborne critical care is made quicker, safer and more accessible than ever.</p>
+
+          <p>Whether you require a domestic air ambulance within your country or an international medical evacuation,
+            we provide our services worldwide.</p>
         </div>
-      </section>
+
+        <!-- RIGHT IMAGE -->
+        <div class="intro-right" data-aos="fade-left">
+          <img src="images/groupcharters.jpg" alt="Air Ambulance Image">
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+<style>
+  /* ---------------------------------------------------
+   INTRO SECTION (CENTERED LAYOUT + BALANCED SPACING)
+--------------------------------------------------- */
+.intro-section {
+  padding: 60px 20px;  /* adds left-right spacing */
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* center items horizontally */
+  gap: 20px;                /* reduce space between text + image */
+  max-width: 1200px;        /* keeps layout centered */
+  margin: 0 auto;           /* centers full content block */
+}
+
+.intro-left,
+.intro-right {
+  flex: 1;
+}
+
+.intro-left {
+  padding: 0 20px;           /* inner padding to avoid touching edges */
+}
+
+.intro-left h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.intro-left p {
+  margin-bottom: 15px;
+}
+
+.intro-right {
+  text-align: center;
+}
+
+.intro-right img {
+  width: 100%;
+  max-width: 620px;
+  border-radius: 10px;
+  object-fit: cover;
+  padding: 0 20px;           /* inner spacing to prevent touching right side */
+}
+
+
+/* ---------------------------------------------------
+   MOBILE RESPONSIVE (PERFECT CENTERED)
+--------------------------------------------------- */
+@media (max-width: 768px) {
+
+  .intro-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .intro-left {
+    padding: 0 10px;
+  }
+
+  .intro-left h1 {
+    font-size: 26px !important;
+  }
+
+  .intro-right img {
+    max-width: 300px;
+    margin-top: 15px;
+    padding: 0;
+  }
+}
+
+</style>
 
 
 
@@ -170,8 +266,6 @@
       <img src="/images/vipJets-new.jpg" alt="VIP & Business Jets">
       <div class="card-body">                
         <h3>VIP & Business Jets</h3>
-        <p>Fly in luxury and privacy with Air Medical 24X7’s VIP & Business Jets. Save time and travel worldwide in Comfort, Safety, and Complete confidentiality.</p>
-        <a class="learn" href="#">Learn more ›</a>
       </div>
     </article>
 
@@ -179,9 +273,6 @@
       <img src="/images/gc-new.jpg" alt="Group Charters">
       <div class="card-body">
         <h3>Group Charters</h3>
-        <p>Air Medical 24X7 offers flexible group charters for Business, Events, and Teams. 
-          Travel together on your schedule with comfort and Global Reliability.</p>
-        <a class="learn" href="#">Learn more ›</a>
       </div>
     </article>
 
@@ -189,9 +280,6 @@
       <img src="/images/P-Jet.jpg" alt="Private Jets">
       <div class="card-body">
         <h3>Private Jets</h3>
-        <p>Experience unmatched luxury with Air Medical 24X7 Private Jets. 
-          Fly anytime, anywhere with Speed, Privacy, and Premium Service 24X7 Worldwide.</p>
-        <a class="learn" href="#">Learn more ›</a>
       </div>
     </article>
 
@@ -199,9 +287,6 @@
       <img src="images/r-flight-new.jpg" alt="Repatriation Flights">
       <div class="card-body">
         <h3>Repatriation Flights</h3>
-        <p>Trust Air Medical 24X7 for safe, compassionate repatriation flights. 
-          Our expert crew ensures secure global patient transport and Emergency Retrieval.</p>
-        <a class="learn" href="#">Learn more ›</a>
       </div>
     </article>
 
@@ -214,18 +299,16 @@
       <!-- About / Blue Connect -->
       <section class="split" data-aos="fade-up" aria-label="about">
         <div class="left">
-          <small class="muted">About</small>
           <h2>About Air Medical 24x7 – Trusted Air Ambulance Charter Provider</h2>
-          <p>Air Medical 24x7 is a leading provider of air ambulance charter services in India and abroad, 
-            offering 24-hour emergency medical transport for critically ill or injured patients. 
-            Our mission is to deliver fast, safe, and reliable air medical evacuation services anywhere in the world.</p>
-          <p class="muted">Learn more ›</p>
+          <p>At Air Medical 24X7, we provide reliable and fast air ambulance charter services across the world. 
+            Our ICU-equipped aircraft and expert medical teams ensure safe, critical care transfer for patients 
+            in emergencies, neonatal transfers, organ transfer, and international medical evacuation. </p>
         </div>
         <div class="right">
           
-          <p class="muted">With a fleet of ICU-equipped aircraft, experienced doctors, paramedics, and flight nurses, 
-            we ensure every transfer is handled with the highest level of care and precision. 
-            Whether it’s a domestic air ambulance in India or an international medical evacuation, we’re ready—every minute, every mile, every life.</p>
+          <p class="muted">As the leading provider of medical air transfers worldwide, 
+            Air Medical 24X7 is supported by a strong network of medical professionals, doctors, and hospitals to ensure
+             you get the best possible care, no matter where you're located</p>
         </div>
       </section>
 
@@ -368,7 +451,7 @@
 <!-- ============================= -->
 <section class="why-choose section-padding" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">Why Choose <span style="color:#f36f21;">Air Medical 24x7?</span></h2>
+    <h2 class="section-title">Why Choose <span style="color:#5A75A6;">Air Medical 24x7?</span></h2>
     <ul class="check-list">
       <li><strong>24/7 Availability:</strong> Immediate response and activation for medical flights anytime, anywhere.</li>
       <li><strong>ICU-Level Care in Flight:</strong> Each aircraft functions as a mini flying ICU with advanced life-support systems.</li>
@@ -386,7 +469,7 @@
 <!-- ============================= -->
 <section class="cost-section section-padding" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">What Does an <span style="color:#f36f21;">Air Ambulance Charter</span> Cost?</h2>
+    <h2 class="section-title">What Does an <span style="color:#5A75A6;">Air Ambulance Charter</span> Cost?</h2>
     <p>The cost of air ambulance services in India depends on several key factors:</p>
     <ul class="dash-list">
       <li><strong>Distance Covered:</strong> The longer the route, the higher the cost.</li>
@@ -413,7 +496,7 @@
 <!-- ============================= -->
 <section class="process-section section-padding" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">How Our <span style="color:#f36f21;">Air Ambulance Process</span> Works</h2>
+    <h2 class="section-title">How Our <span style="color:#5A75A6;">Air Ambulance Process</span> Works</h2>
     <div class="steps-grid">
       <div class="step-card">
         <h3>Step 1 – Contact Us (24x7 Hotline)</h3>
@@ -473,11 +556,11 @@
 .container { max-width: 1100px; margin: 0 auto; font-family: 'Poppins', sans-serif; color: #333; overflow: auto;  }
 
 .check-list li, .dash-list li { margin-bottom: 10px; line-height: 1.7; }
-.dash-list li::before { content: "• "; color: #f36f21; font-weight: bold; }
+.dash-list li::before { content: "• "; color: #5A75A6; font-weight: bold; }
 
 .highlight-box {
   background: #fff3ec;
-  border-left: 4px solid #f36f21;
+  border-left: 4px solid #5A75A6;
   padding: 20px;
   margin-top: 25px;
   border-radius: 10px;
@@ -496,10 +579,10 @@
   transition: all 0.3s ease;
 }
 .step-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.step-card h3 { color: #f36f21; font-size: 18px; margin-bottom: 10px; }
+.step-card h3 { color: #5A75A6; font-size: 18px; margin-bottom: 10px; }
 
 .cta-section {
-  background: linear-gradient(135deg, #f36f21, #ff8a42);
+  background: linear-gradient(135deg, #5A75A6, #5A75A6);
   color: #fff;
   text-align: center;
   padding: 70px 20px;
@@ -517,10 +600,10 @@
   text-decoration: none;
   transition: 0.3s;
 }
-.btn-primary { background: #fff; color: #f36f21; }
-.btn-primary:hover { background: #ffb68a; color: #fff; }
+.btn-primary { background: #fff; color: #5A75A6; }
+.btn-primary:hover { background: #FF4D4D; color: #fff; }
 .btn-outline { border: 2px solid #fff; color: #fff; }
-.btn-outline:hover { background: #fff; color: #f36f21; }
+.btn-outline:hover { background: #fff; color: #5A75A6; }
 </style>
 
 
@@ -797,7 +880,7 @@
 }
 
   :root{
-      --brand:#f36f21; /* Air Medical 24x7 orange */
+      --brand:#5A75A6; /* Air Medical 24x7 orange */
       --dark:#222;
       --muted:#7a7a7a;
       --bg:#f5f6f8;
@@ -866,7 +949,7 @@
 }
 
 .card .learn {
-  color: #f36f21;
+  color: #5A75A6;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -878,7 +961,7 @@
 }
 
 .card:hover .learn {
-  color: #d55d18;
+  color: #5A75A6;
 }
 
 
@@ -1044,6 +1127,7 @@ body {
 }
 
   </style>
+  
 </style>
 
 
