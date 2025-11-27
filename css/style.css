@@ -9495,24 +9495,6 @@ html, body {
     padding: 20px 10px !important;
   }
 
-  /* Fix ISO Badge pushing content */
-  .badge,
-  .iso-badge,
-  .certified-badge {
-    max-width: 90px !important;
-    height: auto !important;
-    position: static !important; /* Prevent overlap and extra space */
-    margin: 10px auto !important;
-    display: block !important;
-  }
-
-  /* Remove excessive margins added by Bootstrap overrides or custom CSS */
-  * {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-}
 
 /* ============================================
    MOBILE TYPOGRAPHY FIX
@@ -9601,5 +9583,4 @@ html, body {
     padding: 4px 10px !important;
   }
 }
-
-
+}
