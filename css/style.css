@@ -9584,3 +9584,8 @@ html, body {
   }
 }
 }
+
+.hero-wrap {
+  height: calc(100vh - 117px);
+  min-height: 700px;
+}
