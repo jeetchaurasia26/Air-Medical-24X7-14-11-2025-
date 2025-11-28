@@ -9536,7 +9536,7 @@ html, body {
   }
 
   .navbar-brand img {
-    max-height: 70px !important;
+    max-height: 0px !important;
     width: 100px !important;
   }
 
