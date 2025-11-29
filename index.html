@@ -383,18 +383,165 @@ body {
 
 
     
-     <body>
-    <div class="hero-wrap" style="background-image: url('images/websitebannersherobanner1.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-          </div>
+     <!-- HERO BANNER -->
+<div class="hero-wrap" style="background-image: url('images/websitebannersherobanner1.jpg');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="row justify-content-end align-items-center hero-row">
+
+      <!-- FORM WRAPPER -->
+      <div class="col-lg-4 col-md-5">
+        <div class="hero-form-box">
+
+          <h4 class="form-title">Request Quote</h4>
+
+          <form id="heroQuoteForm">
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+              <select class="form-control" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="Air Ambulance">Air Ambulance</option>
+                <option value="Medical Escort">Medical Escort</option>
+                <option value="Non-Emergency Transfer">Non-Emergency Transfer</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+
+          </form>
+
         </div>
       </div>
+
     </div>
+  </div>
+</div>
 
+<style>
+  /* HERO BANNER FIXES */
+.hero-wrap {
+  width: 100%;
+  height: 680px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
+.hero-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25);
+}
+
+/* FIX ROW ALIGNMENT */
+.hero-row {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+}
+
+/* FORM BOX — CLEAN, SMALL, PREMIUM */
+.hero-form-box {
+  background: #ffffff;
+  padding: 22px 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  width: 100%;
+  max-width: 340px;       /* FIX! smaller form */
+  margin-left: auto;
+}
+
+.hero-form-box .form-title {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 18px;
+}
+
+/* Input Styling */
+.hero-form-box .form-control {
+  height: 42px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.hero-form-box select.form-control {
+  height: 42px;
+}
+
+/* Submit Button */
+.hero-form-box button {
+  height: 42px;
+  font-size: 15px;
+  border-radius: 6px;
+  background: #4776e6;
+  border-color: #4776e6;
+}
+
+/* intl-tel-input fix */
+.iti {
+  width: 100%;
+}
+.iti input {
+  height: 42px !important;
+  padding-left: 50px !important;
+}
+
+/* MOBILE FIX — HERO + FORM */
+@media(max-width: 768px) {
+
+  /* Increase hero height so the form fits comfortably */
+  .hero-wrap {
+    height: auto;
+    min-height: 400px;        /* FIXED */
+    padding-top: 20px;
+    padding-bottom: 60px;     /* Extra bottom spacing so form doesn’t overflow */
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* Center form correctly */
+  .hero-row {
+    margin-top: 0 !important;
+    justify-content: center !important;
+  }
+
+  /* Fix form box layout */
+  .hero-form-box {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 20px 15px;
+  }
+
+  /* Ensure next section does NOT overlap */
+  .hero-wrap + section,
+  .hero-wrap + div {
+    margin-top: 40px !important;
+  }
+}
+
+</style>
+<!--END HERO BANNER -->
 
 
     <section class="ftco-counter ftco-intro" id="section-counter">
@@ -485,10 +632,7 @@ body {
 		    					<div class="text p-3 p-md-4">
 		    						<h3><a href="#">Medical Tourism </a></h3> 
 		    						<p>Medical Tourism and Patient Transfer
-                        Air Medical 24x7 supports global medical tourism through safe and seamless air ambulance and medical evacuation services. 
-                        Whether you need international medevac, medical escort, or commercial stretcher flights, we provide end-to-end coordination with hospitals, doctors, and families. 
-                        Our 24×7 service ensures affordable, fast, and reliable medical transport for patients seeking treatment abroad.</p>
-
+                        Air Medical 24x7 supports global medical tourism through safe and seamless air ambulance and medical evacuation services.</p>
 		    						<a href="/medical-tourism" class="read-more">Read More</a>
 		                <div class="progress custom-progress-success">
 		                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
