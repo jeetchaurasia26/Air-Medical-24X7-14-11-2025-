@@ -936,7 +936,8 @@ pre {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%; }
+    max-width: 100%;
+   }
   .order-md-first {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -6190,7 +6191,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 1.5rem !important; }
+  margin-bottom: -51px !important; }
 
 .ml-5,
 .mx-5 {
@@ -8291,20 +8292,26 @@ textarea.form-control {
   .ftco-footer .ftco-footer-widget h2 {
     font-weight: normal;
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-size: 18px;
     font-weight: 400;
     position: relative;
     text-transform: uppercase;
     letter-spacing: 1px; }
-    .ftco-footer .ftco-footer-widget h2:after {
+
+    /* ==================  footer line start  ================== */
+
+    /* .ftco-footer .ftco-footer-widget h2:after {
       position: absolute;
       bottom: -15px;
       left: 0;
       content: '';
       width: 70px;
       height: 1px;
-      background: #fff; }
+      background: #fff; } */
+
+        /* ==================  footer line end  ================== */
+
   .ftco-footer .ftco-footer-widget ul li a span {
     color: #fff; }
   .ftco-footer .ftco-footer-widget .btn-primary {
@@ -9475,8 +9482,8 @@ html, body {
   section, div, .container, .container-fluid {
     height: auto !important;
     min-height: auto !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    /* padding-top: 10px !important;
+    padding-bottom: 1px !important; */
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
