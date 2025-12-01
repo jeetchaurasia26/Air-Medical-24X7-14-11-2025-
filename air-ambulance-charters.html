@@ -71,13 +71,26 @@
       </button>
 
 
-      <!-- START nav -->
+    
+        <!-- START nav -->
+       <!-- Top Slim Contact Bar -->
+<div class="top-contact-fixed">
+  <a href="tel:+971565542001" class="top-contact-link">
+    Call us Now : +971 56 554 2001
+  </a>
+  <span class="divider">|</span>
+  <a href="https://wa.me/971565542001" target="_blank" class="top-contact-link">
+    WhatsApp us Now
+  </a>
+</div>
+
+       
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 
-
-                 <li class="nav-item dropdown">
+                     <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
     <a href="air-ambulance.html" class="nav-link dropdown-toggle" id="airambulance" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Air Ambulance
     </a>
@@ -88,6 +101,7 @@
         <li><hr class="dropdown-divider"></li>
     </ul>
 </li>
+
 
           <li class="nav-item dropdown">
     <a href="medical-treatment-facilities.html" class="nav-link dropdown-toggle" id="medicalTreatmentDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -102,7 +116,6 @@
     </ul>
 </li>
 
-          
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 
           
@@ -110,6 +123,79 @@
       </div>
     </div>
   </nav>
+
+  <style>
+  /* ================================
+   SLIM FIXED TOP CONTACT BAR
+   ================================ */
+.top-contact-fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  text-align: center;
+
+  padding: 6px 0;              
+  background: #ffffff;          
+  border-bottom: 1px solid #e0e0e0;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Links */
+.top-contact-link {
+  color: #007bff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.top-contact-link:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  color: #777;
+}
+
+/* ================================
+   FIX HEADER OVERLAP
+   ================================ */
+body {
+  padding-top: 42px !important;  /* FIXED — perfect for desktop */
+}
+
+/* ================================
+   MOBILE FIX
+   ================================ */
+@media (max-width: 480px) {
+
+  .top-contact-fixed {
+    flex-direction: row;        /* keep one single line on mobile */
+    gap: 6px;
+    padding: 5px 0;
+    font-size: 13px;
+  }
+
+  .divider {
+    display: inline;            /* keep | divider */
+  }
+
+  body {
+    padding-top: 45px !important;   /* removed the big 95px */
+  }
+}
+
+  </style>
     <!-- END nav -->
 
      <body>
@@ -325,18 +411,15 @@
 
         <!-- LEFT CONTENT -->
         <div class="intro-left" data-aos="fade-right">
-          <small class="muted">Air Ambulance Charter Services | Air Medical 24x7</small>
+          <small class="muted">Air Ambulance Charter Services  | Air Medical 24x7</small>
           <h1>Air Ambulance Charter Services | 24x7 Emergency Medical Flights</h1>
 
-          <p>Air Medical 24X7 offers 24X7 air ambulance charter services globally.
-            Fully equipped ICU aircraft, experienced medical teams, and rapid response for critical patient transfers.
-            Call now for an emergency air ambulance quote.</p>
+          <p>Air Medical 24X7 is a prominent provider of air ambulance charter services across the world. We are dedicated to providing emergency air medical transfer 24 hours a day, assisting critically ill or injured patients in receiving medical care, regardless of their location.
+          </p>
 
-          <p>With the Air Medical 24X7 grounded air ambulance service, a fleet of aircrafts equipped with ICU and medical professionals,
-            airborne critical care is made quicker, safer and more accessible than ever.</p>
+          <p>With the Air Medical 24X7 grounded air ambulance service, a fleet of aircrafts equipped with ICU and medical professionals, airborne critical care is made quicker, safer and more accessible than ever. </p>
 
-          <p>Whether you require a domestic air ambulance within your country or an international medical evacuation,
-            we provide our services worldwide.</p>
+          <p>Whether you require a domestic air ambulance within your country or an international medical evacuation, we provide our services worldwide. </p>
         </div>
 
         <!-- RIGHT IMAGE -->
@@ -439,21 +522,21 @@
   <div class="services-grid">
     
     <article class="card" data-aos="zoom-in" data-aos-delay="50">
-      <img src="/images/vipBusiness.jpg" alt="VIP & Business Jets">
+      <img src="images/vipBusiness.jpg" alt="VIP & Business Jets">
       <div class="card-body">                
         <h3>VIP & Business Jets</h3>
       </div>
     </article>
 
     <article class="card" data-aos="zoom-in" data-aos-delay="100">
-      <img src="/images/groupcharters.jpg" alt="Group Charters">
+      <img src="images/groupcharters.jpg" alt="Group Charters">
       <div class="card-body">
         <h3>Group Charters</h3>
       </div>
     </article>
 
     <article class="card" data-aos="zoom-in" data-aos-delay="150">
-      <img src="/images/privateJet.jpg" alt="Private Jets">
+      <img src="images/privateJet.jpg" alt="Private Jets">
       <div class="card-body">
         <h3>Private Jets</h3>
       </div>
@@ -490,7 +573,7 @@
 
       <!-- Fleet choices -->
       <section data-aos="fade-up">
-        <small class="muted">Choice of Fleet</small>
+        <small class="muted">Air Ambulance Charter Services </small>
         <h2 style="margin-top:6px">Access several thousand well-maintained aircraft across airports in the world, that can be chartered as per your specific requirements.</h2>
 
         <div class="fleet" style="margin-top:18px">
@@ -549,7 +632,7 @@
 
       <div class="bullet" data-target="content4" data-aos="fade-right" data-aos-delay="180">
         <div class="icon">✈️</div>
-        <div><h4>Organ Transport & Transplant Flights</h4></div>
+        <div><h4>Organ Transfer Flights</h4></div>
       </div>
     </div>
 
@@ -561,9 +644,8 @@
         <img src="images/logo.png" alt="Air Medical 24x7 Logo" style="width:120px;margin-bottom:10px;">
         <h2>Emergency Air Ambulance Charter</h2>
         <p class="muted">
-          We provide 24x7 Emergency Air Ambulance Services equipped with ICU facilities, ventilators, monitors, oxygen support, and defibrillators. 
-          Our team of critical care doctors, flight medics, and nurses ensures safe and quick patient transport across India and globally.
-          Whether it’s a trauma, cardiac arrest, or critical illness, we offer rapid air medical response for timely care.
+          We offer 24/7 emergency air ambulance services with fully equipped ICU aircraft, ventilators, monitors, and oxygen support. Our experienced doctors, nurses and flight medics provide advanced life support during rapid patient transfers anywhere globally. Whether trauma, cardiac arrest, or critical illness, we deliver timely and safe medical air transfer.  
+
         </p>
       </div>
 
@@ -572,9 +654,7 @@
         <img src="images/logo.png" alt="Air Medical 24x7 Logo" style="width:120px;margin-bottom:10px;">
         <h2>International Medical Evacuation</h2>
         <p class="muted">
-          Our international air ambulance services handle cross-border medical transfers with complete logistics, 
-          including landing permits, visa support, and embassy coordination. 
-          We operate flights to destinations like the UAE, UK, USA, Nepal, Bangladesh, and more, ensuring smooth and safe transfers.
+         Our international air ambulance service facilitates patient transfers across borders with complete medical coordination, landing permits, visa assistance, and diplomatic clearances. We manage every aspect of patient transfer, ensuring safe and reliable transfers to destinations around the world including the UAE, UK, USA, and beyond. 
         </p>
       </div>
 
@@ -583,18 +663,16 @@
         <img src="images/logo.png" alt="Air Medical 24x7 Logo" style="width:120px;margin-bottom:10px;">
         <h2>Neonatal & Pediatric Air Ambulance</h2>
         <p class="muted">
-          We specialize in neonatal and pediatric air ambulance services, equipped with incubators, pediatric ventilators, and expert pediatric intensivists. 
-          Our medical team ensures the safe transfer of newborns, premature babies, and children needing specialized care during flight.
+          We specialize in neonatal and pediatric air ambulance services with incubators, pediatric ventilators, and dedicated pediatric intensivists. Our team safely transfers newborns, premature babies, and children requiring specialized medical care during air transfer.
         </p>
       </div>
 
       <!-- Content 4 -->
       <div class="content-box" id="content4">
         <img src="images/logo.png" alt="Air Medical 24x7 Logo" style="width:120px;margin-bottom:10px;">
-        <h2>Organ Transport & Transplant Flights</h2>
+        <h2>Organ Transfer Flights</h2>
         <p class="muted">
-          For organ transport and transplant operations, we provide rapid air ambulance services to ensure timely delivery of organs and medical teams. 
-          Our coordinators work closely with hospitals and transplant units to manage seamless organ transfer logistics across cities or countries.
+          For urgent organ transfer, we provide rapid air ambulance services ensuring timely delivery of organs and transfer teams. Our medical crews coordinate closely with hospitals for smooth, life-saving organ transfers across cities and countries.
         </p>
       </div>
     </div>
@@ -627,14 +705,19 @@
 <!-- ============================= -->
 <section class="why-choose section-padding" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">Why Choose <span style="color:#5A75A6;">Air Medical 24x7?</span></h2>
+    <h2 class="section-title">Why Choose  <span style="color:#5A75A6;">Air Medical  24X7?</span></h2>
     <ul class="check-list">
-      <li><strong>24/7 Availability:</strong> Immediate response and activation for medical flights anytime, anywhere.</li>
-      <li><strong>ICU-Level Care in Flight:</strong> Each aircraft functions as a mini flying ICU with advanced life-support systems.</li>
-      <li> <strong>Experienced Medical Teams:</strong> Staffed with critical care doctors, anesthetists, EMTs, and paramedics trained in aeromedical transport.</li>
-      <li> <strong>Global Coverage:</strong> We operate across India (Delhi, Mumbai, Chennai, Kolkata) and internationally (Dubai, London, New York, etc.).</li>
-      <li><strong>Transparent Pricing:</strong> No hidden costs—just clear, honest quotes suited to your needs.</li>
-      <li> <strong>End-to-End Coordination:</strong> From bed-to-bed transfer, ground ambulance, and hospital coordination to final handover—everything is managed by our team.</li>
+      <li><strong style="font-weight: 600;">24/7 Availability:</strong> Immediate response and activation for medical flights anytime, anywhere.</li>
+      
+      <li><strong style="font-weight: 600;">ICU-Level Care in Flight :</strong> We operate all aircraft as <strong style="font-weight: 600;">mini-hospitals in the sky. </strong> mini-hospitals in the sky. Each aircraft is equipped with <strong style="font-weight: 600;"> true ICU-level, advanced medical capabilities,</strong>  including ventilators, multi-parameter monitors, defibrillators, infusion pumps, suction units, and more all using <strong style="font-weight: 600;"> FAA-approved medical equipment </strong>  specifically certified for in-flight use.</li>
+      
+      <li><strong style="font-weight: 600;">Experienced Medical Teams </strong>All crew members consist of critical-care-trained doctors, anesthetists, flight medics, EMTs, and paramedics, and all are fully trained. </li>
+
+      <li><strong style="font-weight: 600;">Global Coverage </strong>Whether you are in the UK,USA, or UAE, our domestic and international air ambulance services allow us to go anywhere in the world, with full route and airport access. </li>
+
+      <li><strong style="font-weight: 600;">Transparent Pricing </strong>We offer simple, upfront quotes, with no hidden costs. Our team will provide pricing options for your budget and medical needs!  </li>
+
+      <li><strong style="font-weight: 600;">End-to-End Coordination </strong>We provide bed-to-bed transfer, including from hospital to airport, hospital liaison, airport clearance formalities, and handover at the receiving medical facility - all coordinated for you.  </li>
     </ul>
   </div>
 </section>
@@ -645,18 +728,29 @@
 <!-- ============================= -->
 <section class="cost-section section-padding" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">What Does an <span style="color:#5A75A6;">Air Ambulance Charter</span> Cost?</h2>
-    <p>The cost of air ambulance services in India depends on several key factors:</p>
-    <ul class="dash-list">
-      <li><strong>Distance Covered:</strong> The longer the route, the higher the cost.</li>
-      <li><strong>Aircraft Type:</strong> Jets, turboprops, or helicopters have varying costs depending on speed and medical equipment.</li>
-      <li><strong>Medical Equipment Required:</strong> ICU-level flights with ventilators and life-support devices cost more than basic transfers.</li>
-      <li><strong>Medical Team Composition:</strong> More complex cases requiring multiple doctors or specialists will affect pricing.</li>
-      <li><strong>Ground Ambulance Transfers:</strong> Ground-to-airport and hospital transfers are included as part of end-to-end service.</li>
+    <h2 class="section-title">What Is the Cost of an <span style="color:#5A75A6;">Air Ambulance Charter</span>? </h2>
+
+    <p>The cost of an Air Ambulance Charter can vary significantly based on several important factors. Understanding these variables can help you better estimate expenses and choose the right service for your needs. Key factors influencing the air ambulance cost include:
+</p>
+    <ul >
+      <li> <strong style="font-weight: 600;"> Distance to be Covered: </strong>  The longer the route, the higher the cost.</li>
+  
+      <li> <strong style="font-weight: 600;"> Type of Aircraft:  </strong>   Different aircraft types come with different price points. Options may include jets, turboprops, each offering varying levels of speed, comfort, and medical support capabilities.</li>
+   
+      <li> <strong style="font-weight: 600;"> Onboard Medical Equipment and Complexity:  </strong>  The level of medical care required during transfer affects cost. A flight equipped with advanced life-support systems and specialized medical devices will be more expensive than one with basic monitoring equipment.
+</li>
+
+      <li> <strong style="font-weight: 600;"> Number of Medical Staff:  </strong> The number and expertise of medical personnel on board also impact pricing. Critical care flights requiring doctors, nurses, and flight medics typically incur higher charges.
+</li>
+      <li> <strong style="font-weight: 600;"> Ground Ambulance Arrangements:  </strong> Coordinating ground ambulance services at both the departure and destination points is an additional cost factor. Seamless ground transfers ensure timely and safe transfer to and from the aircraft.
+
+</li>
+  
     </ul>
 
     <div class="highlight-box">
-      <p>💡 <strong>Transparent Pricing Promise:</strong> Whether you need a full ICU air ambulance or a medical escort on a commercial flight, Air Medical 24x7 offers customized, budget-friendly options.</p>
+      <p>💡 <strong style="font-weight: 600;">Our pricing is always transparent:</strong> Whether you need a full <strong style="font-weight:600 ;">ICU air ambulance or a medical escort on a commercial flight, </strong>  we provide options to suit all budgets. </p>
+      <p style="font-size: 18px; font-weight: 600;"> Call now for a custom quote:</p>
       <p>📞 <strong>Call for a free quote:</strong> +971 56 554 2001<br>
       📧 <strong>Email:</strong> info@airmedical24x7.com</p>
     </div>
@@ -672,11 +766,11 @@
 <!-- ============================= -->
 <section class="process-section section-padding" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title">How Our <span style="color:#5A75A6;">Air Ambulance Process</span> Works</h2>
+    <h2 class="section-title"> How the Process Works </h2>
     <div class="steps-grid">
       <div class="step-card">
-        <h3>Step 1 – Contact Us (24x7 Hotline)</h3>
-        <p>Share patient details, condition, and current location. Our operations team responds instantly.</p>
+        <h3 style="font-weight: 600;">Step 1: Contact Us ( 24X7 Hotline)</h3>
+        <p>Provide basic patient details, medical condition, and location. Our team responds instantly.</p>
       </div>
       <div class="step-card">
         <h3>Step 2 – Medical Assessment</h3>
