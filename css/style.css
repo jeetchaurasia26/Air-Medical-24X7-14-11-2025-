@@ -6191,7 +6191,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: -51px !important; }
+  margin-bottom: 3rem !important; }
 
 .ml-5,
 .mx-5 {
@@ -7543,7 +7543,7 @@ h1, h2, h3, h4, h5,
       opacity: 1; }
   .owl-carousel .owl-nav {
     position: absolute;
-    top: 50%;
+    top: 100%;
     width: 100%; }
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
@@ -8277,7 +8277,7 @@ textarea.form-control {
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 2em 0; } }
 
 .ftco-bg-dark {
   background: #3c312e; }
