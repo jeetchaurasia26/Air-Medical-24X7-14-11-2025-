@@ -8503,7 +8503,8 @@ textarea.form-control {
 
 #section-counter {
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+top: -30px; }
 
 .block-20 {
   overflow: hidden;
@@ -9439,7 +9440,7 @@ body {
 @media (max-width: 768px) {
 
   .hero-wrap {
-    height: 38vh !important;       /* Reduce hero height */
+    height: 50vh !important;       /* Reduce hero height */
     min-height: 38vh !important;
   }
 
@@ -9450,7 +9451,8 @@ body {
 
   .hero-wrap .container,
   .hero-wrap .row {
-    min-height: 38vh !important;
+    
+      min-height: 38vh !important;
   }
 
   .ftco-animate {
@@ -9487,6 +9489,8 @@ html, body {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
+
+  
 
   /* Fix oversized images */
   img {
