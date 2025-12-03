@@ -359,7 +359,10 @@ hr {
 small,
 .small {
   font-size: 80%;
-  font-weight: 400; }
+  font-weight: 400;
+  padding-left: 10px;
+  margin-top: -20px;
+ }
 
 mark,
 .mark {
@@ -462,10 +465,15 @@ pre {
   margin-left: auto; }
   @media (min-width: 576px) {
     .container {
-      max-width: 540px; } }
+      max-width: 540px; }
+
+
+    
+    }
   @media (min-width: 768px) {
     .container {
-      max-width: 720px; } }
+      max-width: 720px; }
+     }
   @media (min-width: 992px) {
     .container {
       max-width: 960px; } }
@@ -7492,7 +7500,10 @@ h1, h2, h3, h4, h5,
     
   
   }
-    
+  
+  .why-choose-us-section{
+   
+  }
 
 .slider-text {
   color: #fff;
@@ -8254,6 +8265,15 @@ textarea.form-control {
   font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300; }
 
+.recent-form-blog {
+  top: -1rem;
+  
+}
+.recent-form-blog-box{
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
 .ftco-section .ftco-primary-title {
   margin-top: 0;
   margin-bottom: 30px; }
@@ -8278,7 +8298,17 @@ textarea.form-control {
   @media (max-width: 767.98px) {
     .ftco-section {
       padding: 0em 0; 
-    top: -1em ;} }
+    top: 3em ;} 
+
+  .recent-form-blog {
+    position: relative;
+  top: 0.5rem;
+font-size: 2px;
+font-weight: 600 !important;  
+ 
+}
+
+  }
 
 .ftco-bg-dark {
   background: #3c312e; }
@@ -8541,11 +8571,23 @@ top: -30px; }
         width: 90%;
         margin: 0 auto;
         margin-top: -40px;
-        background: #fff; } }
+        background: #fff; } } 
     .blog-entry .text .heading {
       font-size: 20px;
-      margin-bottom: 16px;
-      font-weight: 400; }
+      margin-bottom: -4px;
+      font-weight: 400;
+    padding: 15px;
+    
+   }
+   .blog-content-date-p{
+   
+    margin-left: 10px;
+   }
+
+   .blog-content-date-readmore{
+    margin-left: 10px;
+   }
+    
       .blog-entry .text .heading a {
         color: #000; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
