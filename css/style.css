@@ -8378,6 +8378,7 @@ font-weight: 600 !important;
   list-style: none;
   margin: 0 10px 0 0;
   display: inline-block; }
+
   .ftco-footer-social li a {
     height: 50px;
     width: 50px;
@@ -8386,6 +8387,11 @@ font-weight: 600 !important;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     position: relative; }
+    .ftco-footer-social li a:hover{
+background-color: #007bff;
+    }
+
+
     .ftco-footer-social li a span {
       position: absolute;
       font-size: 26px;
@@ -8535,7 +8541,7 @@ font-weight: 600 !important;
 #section-counter {
   position: relative;
   z-index: 0;
-top: -30px; }
+top: 10px; }
 
 .block-20 {
   overflow: hidden;
@@ -9732,4 +9738,6 @@ html, body {
   min-height: 700px;
 }
 
-
+body, * {
+  font-family: 'Poppins', sans-serif !important;
+}
